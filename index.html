@@ -9,86 +9,10 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0px;
-  background-color:  #c6f5f3;
-  height:auto;
-  border-style:solid;
-   border-color:black;
-  border-width:1px;
- 
-  border-radius:10px;
-   overflow-x: hidden;
- 
-  transition: 0.5s;
-  padding-top: 30px;
-}
-
-.sidebar a {
-  padding: 20px 0px 8px 50px;
-  text-decoration: none;
-  font-size: 1em;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  
- 
-}
-
-.sidebar a:hover {
-  color: red;
-}
-
-.sidebar .closebtn {
-  position:absolute;float:right;
-  top: -20px;
-  left:-60px;
-  font-size: 40px;
-
-  margin-left: 20px;
-}
-
-.openbtn {
-float:right;
-position:right;
-right:0px;
-  font-size: 20px;
-  cursor: pointer;
-  background-color:  #c6f5f3;
-  color: navy;
-  padding: 10px 15px;
-  border: solid;border-color:navy;border-radius:5px;border-width:1px;
-   -webkit-filter: drop-shadow(8px 8px 10px  rgba(100,100,100,0.45)); /* Safari */
-    filter: drop-shadow(20px 15px 10px  rgba(100,100,100,0.45));
- 
-}
-
-.openbtn:hover {
-  background-color: red;color:white;
-}
-
-#main {
-  transition: margin-right.5s;
-  padding: 15px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-   .sidebar a {font-size: 1.2em;}
-}
-      @media screen and (max-width: 450px) {
   .sidebar {padding-top: 15px;padding-right:50px}
    .sidebar a {font-size: 1.2em;}
-}
-</style> </head>
-  <body>
+}  <body>
     <div id="mySidebar" class="sidebar"> <a href="javascript:void(0)" class="closebtn"
         onclick="closeNav()">×</a>
       <script src="https://kit.fontawesome.com/c2521c5cf4.js" crossorigin="anonymous"></script>
@@ -109,20 +33,20 @@ right:0px;
     </div>
     <div id="main"> <button class="openbtn" onclick="openNav()">☰ Menu</button>
       <h2>Collapsed Sidebar</h2>
-      <p>Click on the hamburger menu/bar icon to open the sidebar, and push this
-        content to the right.</p>
-    </div>
-    <script>
+  <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
+
+<script>
 function openNav() {
-  document.getElementById("mySidebar").style.width = "20%";
-  document.getElementById("mySidebar").style.right = "0%";
-  document.getElementById("main").style.marginleft = "250px";
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
 }
 
 function closeNav() {
-  document.getElementById("mySidebar").style.width = "0px";
-  document.getElementById("main").style.marginleft= "0px";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
 }
 </script>
-  </body>
-</html>
+   
+</body>
+</html> 
